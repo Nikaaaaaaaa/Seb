@@ -1,1 +1,110 @@
-Hello
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Amusante</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background-color: #ffeb3b;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #f57f17;
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: white;
+            font-size: 3rem;
+            text-shadow: 2px 2px #ff5722;
+        }
+
+        .content {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        h2 {
+            color: #ff4081;
+            font-size: 2rem;
+        }
+
+        .joke {
+            font-size: 1.5rem;
+            margin: 20px;
+            color: #8e24aa;
+        }
+
+        button {
+            background-color: #00e676;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #00c853;
+        }
+
+        footer {
+            background-color: #f57f17;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+        }
+
+        footer p {
+            color: white;
+            margin: 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur ma page super marrante ! 🎉</h1>
+    </header>
+    
+    <section class="content">
+        <h2>Voici quelques blagues : </h2>
+        <p class="joke">Pourquoi les plongeurs plongent-ils toujours en arrière et jamais en avant ? Parce que sinon ils tombent dans le bateau ! 😆</p>
+        <button id="change-joke">Changer de blague</button>
+    </section>
+
+    <footer>
+        <p>© 2024 Ma Super Page Marrante</p>
+    </footer>
+
+    <script>
+        const jokes = [
+            "Pourquoi les plongeurs plongent-ils toujours en arrière ? Parce que sinon ils tombent dans le bateau ! 😆",
+            "Quelle est la femelle du hamster ? L'amsterdame ! 😂",
+            "Pourquoi les canards sont toujours à l'heure ? Parce qu'ils sont dans l'étang ! 🦆",
+            "Quel est le comble pour un électricien ? De ne pas être au courant ! ⚡"
+        ];
+
+        document.getElementById('change-joke').addEventListener('click', () => {
+            const jokeElement = document.querySelector('.joke');
+            const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
+            jokeElement.textContent = randomJoke;
+        });
+    </script>
+</body>
+</html>
