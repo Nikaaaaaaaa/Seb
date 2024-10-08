@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Web Parfait 2024</title>
+    <title>Site de Blagues Amusant</title>
     <style>
-        /* Globales */
+        /* Global */
         * {
             margin: 0;
             padding: 0;
@@ -16,7 +16,7 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
             color: #333;
             display: flex;
             flex-direction: column;
@@ -24,8 +24,8 @@
         }
 
         header {
-            background-color: #333;
-            color: #fff;
+            background-color: #4a90e2;
+            color: white;
             padding: 20px;
             text-align: center;
         }
@@ -39,25 +39,25 @@
             justify-content: center;
             gap: 20px;
             padding: 10px 0;
-            background-color: #444;
+            background-color: #357ABD;
         }
 
         nav a {
             color: white;
             padding: 10px 15px;
             text-decoration: none;
-            background-color: #555;
+            background-color: #286090;
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
 
         nav a:hover {
-            background-color: #666;
+            background-color: #204d74;
         }
 
         .hero {
             background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
-            height: 80vh;
+            height: 70vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -85,68 +85,23 @@
             background-color: #ff609d;
         }
 
-        .about {
+        .content {
             padding: 50px;
-            background-color: white;
             text-align: center;
         }
 
-        .about h2 {
+        .content h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
         }
 
-        .about p {
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin: 0 auto;
-            margin-bottom: 20px;
+        .joke {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            color: #333;
         }
 
-        .gallery {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 50px;
-            background-color: #f0f0f0;
-        }
-
-        .gallery img {
-            width: 100%;
-            max-width: 300px;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
-
-        .contact {
-            padding: 50px;
-            background-color: white;
-            text-align: center;
-        }
-
-        .contact h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .contact form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .contact input, .contact textarea {
-            width: 100%;
-            padding: 15px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .contact button {
+        button#change-joke {
             padding: 15px 30px;
             background-color: #28a745;
             color: white;
@@ -156,12 +111,12 @@
             transition: background-color 0.3s ease;
         }
 
-        .contact button:hover {
+        button#change-joke:hover {
             background-color: #218838;
         }
 
         footer {
-            background-color: #333;
+            background-color: #4a90e2;
             color: white;
             padding: 20px;
             text-align: center;
@@ -176,57 +131,50 @@
             .hero h2 {
                 font-size: 2rem;
             }
-
-            .gallery {
-                flex-direction: column;
-            }
         }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Mon Site Parfait</h1>
+        <h1>Bienvenue sur le site de blagues ! 🎉</h1>
         <nav>
-            <a href="#about">À propos</a>
-            <a href="#gallery">Galerie</a>
-            <a href="#contact">Contact</a>
+            <a href="#content">Blagues</a>
+            <a href="#footer">Contact</a>
         </nav>
     </header>
 
     <section class="hero">
         <div>
-            <h2>Bienvenue sur mon site parfait !</h2>
+            <h2>Rions un bon coup ! 😄</h2>
             <button>En savoir plus</button>
         </div>
     </section>
 
-    <section id="about" class="about">
-        <h2>À propos de nous</h2>
-        <p>
-            Nous créons des sites web modernes, performants et optimisés pour offrir la meilleure expérience utilisateur. En 2024, un site parfait doit être rapide, intuitif, et adapté à tous les appareils.
-        </p>
+    <section id="content" class="content">
+        <h2>Voici une blague pour toi :</h2>
+        <p class="joke">Pourquoi les plongeurs plongent-ils toujours en arrière ? Parce que sinon ils tombent dans le bateau ! 😆</p>
+        <button id="change-joke">Changer de blague</button>
     </section>
 
-    <section id="gallery" class="gallery">
-        <img src="https://via.placeholder.com/300" alt="Image 1">
-        <img src="https://via.placeholder.com/300" alt="Image 2">
-        <img src="https://via.placeholder.com/300" alt="Image 3">
-    </section>
-
-    <section id="contact" class="contact">
-        <h2>Contactez-nous</h2>
-        <form>
-            <input type="text" placeholder="Votre nom">
-            <input type="email" placeholder="Votre email">
-            <textarea placeholder="Votre message"></textarea>
-            <button type="submit">Envoyer</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Mon Site Parfait</p>
+    <footer id="footer">
+        <p>&copy; 2024 Site de Blagues Amusant</p>
     </footer>
+
+    <script>
+        const jokes = [
+            "Pourquoi les plongeurs plongent-ils toujours en arrière ? Parce que sinon ils tombent dans le bateau ! 😆",
+            "Quelle est la femelle du hamster ? L'amsterdame ! 😂",
+            "Pourquoi les canards sont toujours à l'heure ? Parce qu'ils sont dans l'étang ! 🦆",
+            "Quel est le comble pour un électricien ? De ne pas être au courant ! ⚡"
+        ];
+
+        document.getElementById('change-joke').addEventListener('click', () => {
+            const jokeElement = document.querySelector('.joke');
+            const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
+            jokeElement.textContent = randomJoke;
+        });
+    </script>
 </body>
 
 </html>
